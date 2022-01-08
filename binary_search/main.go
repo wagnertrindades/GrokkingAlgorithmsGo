@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	my_list := [6]int{1, 3, 5, 7, 9, 10}
+	my_list := []int{1, 3, 5, 7, 9, 10}
 
-	fmt.Println(binary_search(my_list[:], 3))
-	fmt.Println(binary_search(my_list[:], -1))
-	fmt.Println(binary_search(my_list[:], 7))
+	fmt.Println(binary_search(my_list, 3))
+	fmt.Println(binary_search(my_list, -1))
+	fmt.Println(binary_search(my_list, 7))
 }
 
 func binary_search(list []int, item int) (int, bool) {
