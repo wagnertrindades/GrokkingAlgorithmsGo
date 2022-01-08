@@ -10,7 +10,7 @@ func main() {
 	fmt.Println(binary_search(my_list, 7))
 }
 
-func binary_search(list []int, item int) (int, bool) {
+func binary_search(list []int, item int) (bool, int) {
 	low := 0
 	high := len(list) - 1
 
@@ -19,7 +19,7 @@ func binary_search(list []int, item int) (int, bool) {
 		try := list[mid]
 
 		if try == item {
-			return mid, true
+			return true, mid
 		}
 
 		if try > item {
@@ -29,5 +29,5 @@ func binary_search(list []int, item int) (int, bool) {
 		}
 	}
 
-	return 0, false
+	return false, 0
 }
